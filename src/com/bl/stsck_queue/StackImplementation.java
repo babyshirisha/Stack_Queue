@@ -5,6 +5,16 @@ public class StackImplementation implements IStack{
     public void push(int data) {
         list.add(data);
     }
+    public void pop() {
+        while(list.size() > 0) {
+            peak();
+            list.pop();
+        }
+    }
+    void peak(){
+        System.out.println(list.top.data);
+    }
+
 
     @Override
     public String toString() {

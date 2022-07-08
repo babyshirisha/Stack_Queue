@@ -15,6 +15,24 @@ public class LinkedList {
         newNode.next = top;
         top = newNode;
     }
+    public int pop() {
+        Node temp = top;
+        top = temp.next;
+        return (int) temp.data;
+    }
+
+    public int size() {
+        Node temp=top;
+        int count = 0;
+        while(temp!=null)
+        {
+            temp=temp.next;
+            count++;
+        }
+       // System.out.println(count);
+        return count;
+    }
+
 
     @Override
     public String toString() {
