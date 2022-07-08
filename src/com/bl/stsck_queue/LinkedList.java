@@ -32,6 +32,18 @@ public class LinkedList {
        // System.out.println(count);
         return count;
     }
+    public void append(int data) {
+        Node newNode = new Node(data);
+        if (top == null) {
+            top = newNode;
+            return;
+        }
+        Node temp = top;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+    }
 
 
     @Override
